@@ -1,0 +1,36 @@
+{
+  "name": "@unipasswallet/web3-react",
+  "keywords": [
+    "web3-react",
+    "unipass-wallet"
+  ],
+  "author": "lay2",
+  "license": "GPL-3.0-or-later",
+  "repository": "github:UniPass/web3-react",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.1-beta.0",
+  "files": [
+    "dist/*"
+  ],
+  "type": "commonjs",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
+  "dependencies": {
+    "@web3-react/types": "^8.0.20-beta.0",
+    "eventemitter3": "^4.0.7"
+  },
+  "peerDependencies": {
+    "@unipasswallet/ethereum-provider": "^0.0.13-alpha.1"
+  },
+  "devDependencies": {
+    "@web3-react/store": "^8.0.25-beta.0"
+  }
+}

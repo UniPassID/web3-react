@@ -10,7 +10,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "files": [
     "dist/*"
   ],
@@ -24,8 +24,8 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@web3-react/types": "^8.0.20-beta.0",
     "@unipasswallet/ethereum-provider": "0.0.13-alpha.4",
+    "@web3-react/types": "^8.0.20-beta.0",
     "eventemitter3": "^4.0.7"
   },
   "peerDependencies": {

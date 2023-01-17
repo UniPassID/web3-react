@@ -25,11 +25,11 @@
   },
   "dependencies": {
     "@web3-react/types": "^8.0.20-beta.0",
-    "@unipasswallet/ethereum-provider": "^0.0.13-alpha.1",
+    "@unipasswallet/ethereum-provider": "0.0.13-alpha.4",
     "eventemitter3": "^4.0.7"
   },
   "peerDependencies": {
-    "@unipasswallet/ethereum-provider": "^0.0.13-alpha.1"
+    "@unipasswallet/ethereum-provider": "0.0.13-alpha.4"
   },
   "devDependencies": {
     "@web3-react/store": "^8.0.25-beta.0"

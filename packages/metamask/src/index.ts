@@ -51,7 +51,7 @@ export class MetaMask extends Connector {
     return (this.eagerConnection = import('@metamask/detect-provider').then(async (m) => {
       const provider = await m.default(this.options)
       if (provider) {
-        this.provider = provider as MetaMaskProvider
+        this.provider = provider 
 
         // handle the case when e.g. metamask and coinbase wallet are both installed
         if (this.provider.providers?.length) {
@@ -151,7 +151,7 @@ export class MetaMask extends Connector {
 
           // if we're here, we can try to switch networks
           // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          return this.provider!.request({
+          return this.provider.request({
             method: 'wallet_switchEthereumChain',
             params: [{ chainId: desiredChainIdHex }],
           })
@@ -159,7 +159,7 @@ export class MetaMask extends Connector {
               if (error.code === 4902 && typeof desiredChainIdOrChainParameters !== 'number') {
                 // if we're here, we can try to add a new network
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                return this.provider!.request({
+                return this.provider.request({
                   method: 'wallet_addEthereumChain',
                   params: [{ ...desiredChainIdOrChainParameters, chainId: desiredChainIdHex }],
                 })

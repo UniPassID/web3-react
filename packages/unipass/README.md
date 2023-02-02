@@ -1,15 +1,13 @@
 # @web3-react/unipass
 
-@web3-react connector for the [UniPass](https://unipass.vip/) wallet.
-
 ## Installation
 
 ```shell
-  npm install @web3-react/unipass
+  npm install @@unipasswallet/web3-react
 ```
 or
 ```shell
-  yarn add @web3-react/unipass
+  yarn add @@unipasswallet/web3-react
 ```
 
 ## Parameters

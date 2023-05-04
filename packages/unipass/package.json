@@ -24,12 +24,12 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@unipasswallet/ethereum-provider": "^1.1.7",
+    "@unipasswallet/ethereum-provider": "1.1.5-alpha.4",
     "@web3-react/types": "^8.0.20-beta.0",
     "eventemitter3": "^4.0.7"
   },
   "peerDependencies": {
-    "@unipasswallet/ethereum-provider": "^1.1.7"
+    "@unipasswallet/ethereum-provider": "1.1.5-alpha.4"
   },
   "devDependencies": {
     "@web3-react/store": "^8.0.25-beta.0"

@@ -2,6 +2,7 @@ import type {
   UniPassProvider,
   UniPassProviderOptions,
 } from "@unipasswallet/ethereum-provider";
+import { UPAccount } from '@unipasswallet/popup-types';
 import type { Actions, ProviderRpcError } from "@web3-react/types";
 import { Connector } from "@web3-react/types";
 import type { EventEmitter } from "node:events";
@@ -22,6 +23,7 @@ export class UniPass extends Connector {
   /** {@inheritdoc Connector.provider} */
   public declare provider?: UniPassProviderForConnector;
   private readonly options: UniPassProviderOptions;
+  public upAccount?: UPAccount;
   private eagerConnection?: Promise<void>;
 
   constructor({ actions, options, onError }: UniPassConstructorArgs) {
@@ -48,6 +50,7 @@ export class UniPass extends Connector {
 
       const account = await this.provider.connect();
       if (account) {
+        this.upAccount = account;
         this.actions.update({
           chainId: this.options?.chainId ?? 137,
           accounts: [account.address],

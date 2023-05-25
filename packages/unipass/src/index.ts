@@ -41,6 +41,24 @@ export class UniPass extends Connector {
     return await this._connect();
   }
 
+  /** {@inheritdoc Connector.activate} */
+  public async switchChainId(chainId: number): Promise<void> {
+    const cancelActivation = this.actions.startActivation();
+
+    try {
+      if (!this.provider) return cancelActivation();
+
+      await this.provider.request({ method: 'wallet_switchEthereumChain', params: [{ chainId }] });
+      this.actions.update({
+        chainId,
+        accounts: [this.upAccount?.address || ''],
+      });
+    } catch (error) {
+      console.debug('Could not switch chainId', error);
+      cancelActivation();
+    }
+  }
+
   private async _connect(): Promise<void> {
     const cancelActivation = this.actions.startActivation();
 

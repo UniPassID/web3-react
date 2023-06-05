@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.8-alpha.2](https://github.com/UniPass/web3-react/compare/v1.1.8-alpha.1...v1.1.8-alpha.2) (2023-06-05)
+
+
+### Bug Fixes
+
+* throw error when use cancel connect ([7d8fc83](https://github.com/UniPass/web3-react/commit/7d8fc839c61b6f212ad148c810a77872e39a817d))
+
 ### [1.1.8-alpha.1](https://github.com/UniPass/web3-react/compare/v1.1.8-alpha.0...v1.1.8-alpha.1) (2023-05-25)
 
 ### [1.1.8-alpha.0](https://github.com/UniPass/web3-react/compare/v0.0.1-beta.2...v1.1.8-alpha.0) (2023-05-04)

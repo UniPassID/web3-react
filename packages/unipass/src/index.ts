@@ -79,6 +79,7 @@ export class UniPass extends Connector {
     } catch (error) {
       console.debug("Could not connect eagerly", error);
       cancelActivation();
+      throw error
     }
   }
 
